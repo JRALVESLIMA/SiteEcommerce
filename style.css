@@ -279,6 +279,13 @@
       
     }
 
+    .highlight {
+    background: #fcd5ce;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 50px;
+  }
+
     .product-card {
       size: 500%;
       padding: auto;
