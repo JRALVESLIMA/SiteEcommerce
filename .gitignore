@@ -1,0 +1,23 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editor de código
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos temporários
+*.log
+*.tmp
+*.bak
+
+# Cache do navegador ou do sistema
+.cache/
+*.swp
+*.lock
+
+# Pastas de build (caso use futuramente)
+dist/
+build/
