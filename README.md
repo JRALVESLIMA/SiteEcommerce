@@ -19,7 +19,7 @@ Um site de e-commerce simples, desenvolvido com HTML, CSS e JavaScript, focado e
 
 📁 Estrutura do Projeto
 
-    ```pgsql
+    
         SiteEcommerce/
         ├── images/
         ├── bebidas.html
@@ -30,18 +30,19 @@ Um site de e-commerce simples, desenvolvido com HTML, CSS e JavaScript, focado e
         ├── promocoes.html
         ├── script.js
         └── style.css
-    ```
+   
 
 📦 Instalação
-    Clone o repositório:
+   1. Clone o repositório:
 
    ```bash
       git clone https://github.com/JRALVESLIMA/SiteEcommerce.git
-      Navegue até o diretório do projeto:
    ```
+   2. Navegue até o diretório do projeto:
+   
       
-  ```bash
+   ```bash
       cd SiteEcommerce
-      Abra o arquivo index.html em seu navegador preferido.
    ```
+   3. Abra o arquivo index.html em seu navegador preferido.
 
