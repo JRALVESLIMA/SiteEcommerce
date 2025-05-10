@@ -1,7 +1,9 @@
-🍔 SiteEcommerce
+🍔 SiteEcommerc3
+
 Um site de e-commerce simples, desenvolvido com HTML, CSS e JavaScript, focado em produtos alimentícios como lanches, bebidas, porções e combos.
 
 📸 Demonstração
+
    🧰 Tecnologias Utilizadas
        > HTML5
        > CSS3
@@ -16,6 +18,7 @@ Um site de e-commerce simples, desenvolvido com HTML, CSS e JavaScript, focado e
 
 
 📁 Estrutura do Projeto
+
     ```pgsql
         SiteEcommerce/
         ├── images/
