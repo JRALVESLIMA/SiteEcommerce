@@ -1,4 +1,4 @@
-/* Reset básico */
+
 * {
     margin: 0;
     padding: 0;
@@ -193,6 +193,7 @@
     cursor: pointer;
     font-size: 14px;
     width: fit-content;
+    transition: all 0.2s ease-in-out;
   }
 
   .btn-add-cart {
@@ -200,9 +201,132 @@
     color: #fff;
   }
 
+  .btn-add-cart:hover {
+    background-color: #333;
+    transform: scale(1.03);
+  }
+
+  .btn-add-cart:active {
+    transform: scale(0.96);
+    background-color: #222;
+  }
+
   .btn-buy-now {
     background-color: red;
     color: #fff;
+  }
+
+  .btn-buy-now:hover {
+    background-color: #cc0000;
+    transform: scale(1.03);
+  }
+
+  .btn-buy-now:active {
+    transform: scale(0.96);
+    background-color: #990000;
+  }
+
+  /*pagina de pagamentos*/
+  .pagamento-container {
+    background-color: #fff;
+    padding: 3%;
+    border-radius: 5%;
+    max-width: 98%;
+    margin: 10% auto;
+    box-shadow: 0 20px 100px rgba(0,0,0,0.1);
+  }
+
+  .carrinho-itens {
+    margin-bottom: 10%;
+  }
+
+  .carrinho-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5%;
+    border-bottom: 10px solid #eee;
+  }
+
+  .resumo-total {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;    
+  }
+
+  .resumo-botoes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .btn-finalizar-compra {
+    background-color: green;
+    color: #fff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+
+  .btn-finalizar-compra:hover {
+    background-color: darkgreen;
+    transform: scale(1.03);
+  }
+
+  .btn-finalizar-compra:active {
+    background-color: #065f08;
+    transform: scale(0.96);
+  }
+
+  .btn-remover {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    margin-left: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: 0.2s ease-in-out;
+  }
+
+  .btn-remover:hover {
+    background-color: red;
+    transform: scale(1.03);
+  }
+
+  .btn-remover:active {
+    background-color: rgb(248, 72, 72);
+    transform: scale(0.96);
+  }
+
+  .btn-esvaziar {
+    background-color: red;
+    color: #fff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+
+  .carrinho-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .quantidade-input {
+    width: 50px;
+    padding: 4px;
+    text-align: center;
   }
 
   /* Seções */
@@ -461,13 +585,108 @@
       background-color: #990000;
     }
 
-    .section {
-      padding: 4rem 50rem;
-      background-color: #f4f4f4;
-      color: #333;
+    /*pagina de pagamentos*/
+    .pagamento-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 700px;
+      margin: 40px auto;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .carrinho-itens {
+      margin-bottom: 20px;
+    }
+
+    .carrinho-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .resumo-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn-finalizar-compra {
+      background-color: green;
+      color: #fff;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+    }
+
+    .btn-finalizar-compra:hover {
+      background-color: darkgreen;
+      transform: scale(1.03);
+    }
+
+    .btn-finalizar-compra:active {
+      background-color: #065f08;
+      transform: scale(0.96);
+    }
+
+    .btn-remover {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      margin-left: 10px;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
+
+    .btn-remover:hover {
+      background-color: #e60000;
+    }
+
+    .btn-esvaziar {
+      background-color: red;
+      color: #fff;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+    }
+
+    .btn-esvaziar:hover {
+      background-color: #e60000;
+    }
+
+    .btn-esvaziar:active {
+      background-color: #ff4d4d;
+      transform: scale(0.96);
+    }
+
+    .carrinho-item {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .quantidade-input {
+      width: 50px;
+      padding: 4px;
       text-align: center;
     }
+
+  }
+
+
+    
       
-}
+
 
   
