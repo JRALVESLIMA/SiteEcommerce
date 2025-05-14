@@ -26,6 +26,7 @@ Um site de e-commerce simples, desenvolvido com HTML, CSS e JavaScript, focado e
         ├── combos.html
         ├── index.html
         ├── lanches.html
+        ├── pagamento.html
         ├── porcoes.html
         ├── promocoes.html
         ├── script.js
