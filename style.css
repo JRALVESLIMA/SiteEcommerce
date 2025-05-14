@@ -5,11 +5,22 @@
     box-sizing: border-box;
   }
   
+  html, body {
+    height: 100%;
+    margin: 0%;
+  }
+
   body {
+    display: flex;
+    flex-direction: column;
     font-family: Arial, sans-serif;
     background: #f8f8f8;
     color: #333;
-    line-height: 1.4;
+    line-height: 1.4;    
+  }
+
+  .content {
+    flex: 1;
   }
   
   /* Header */
@@ -330,12 +341,12 @@
   }
 
   /* Seções */
-    .section {
-      padding: 4rem 2rem;
-      background-color: #f4f4f4;
-      color: #333;
-      text-align: center;
-    }
+  .section {
+    padding: 4rem 2rem;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+  }
   
   /* Footer */
   .footer {
