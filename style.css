@@ -21,21 +21,33 @@
 
   .content {
     flex: 1;
+    padding-top: 80px;
   }
   
   /* Header */
   .header {
-    background-color: #d62828;
     color: white;
     padding: 1rem;
-    position: relative;
+    position: fixed;        
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1002;          
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    background-color: rgba(240, 6, 6, 0.8);
   }
   
   .header__title {
     text-align: center;
   }
+
   .products__title {
     text-align: center;
+    margin-top: 5%;
   }
   
   .menu-toggle {
@@ -45,9 +57,10 @@
     color: #fff;
     padding: 1rem;
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1001;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    z-index: 1003; 
   }
   
   /* Menu overlay */
@@ -69,6 +82,21 @@
   
   .menu-overlay.active {
     display: flex;
+  }
+
+  .menu-pag {
+    display: flex;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #070707;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translateY(-50%);
+    z-index: 1003; 
+    text-decoration: none;
   }
   
   .menu-list {
@@ -237,7 +265,7 @@
     background-color: #990000;
   }
 
-  /*pagina de pagamentos*/
+  /*pagina de pagamentos MOBILE */
   .pagamento-container {
     background-color: #fff;
     padding: 3%;
@@ -358,21 +386,56 @@
   
   /* Estilos para telas grandes */
   @media (min-width: 768px) {
+    body {
+      padding-top: 4%;
+    }
+
+    .header {
+      color: white;
+      padding: 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      background-color: rgba(240, 6, 6, 0.8);
+    }
+
     .menu-toggle {
-      display: none !important;
+      display: block;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      color: #fff;
+      padding: 1rem;
+      position: absolute;
+      top: 45%;
+      left: 0;
+      z-index: 1001;
+      cursor: pointer;
     }
 
     .menu-overlay {
+      background-color: #1e1e1e;
       display: flex !important;
-      position: static;
-      height: 65px;
+      position: fixed;
+      top: 8%;
+      left: 0;
       width: 100%;
+      height: 75px;
+      z-index: 999;
       flex-direction: row;
       justify-content: center;
       align-items: flex-end;
       padding: 0rem;
     }
-  
+
+    .menu-pag {
+      display: none;
+    }
+
     .menu-list {
       display: flex;
       gap: 2rem;
@@ -405,32 +468,6 @@
       font-size: 0.5em;
         
     }
-    
-    .submenu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: -5%;
-      background-color: #222;
-      padding: 0.5rem 4rem;
-      border-radius: 1rem;
-      flex-direction: column;
-      z-index: 10;
-      min-width: 150px;
-      list-style-type: none;
-    }
-
-    .submenu a {
-      display: flex;
-      align-items: center;
-      white-space: nowrap;
-    }
-      
-  
-    .has-submenu:hover .submenu {
-      display: flex;
-      
-    }
 
     .highlight {
       background: #fcd5ce;
@@ -438,18 +475,6 @@
       text-align: center;
       border-radius: 50px;
    }
-  
-    /*Cardapio*/
-    .submenu-toggle {
-      pointer-events: none;
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 1.2rem;
-      cursor: default;
-      padding: 10;
-      margin: 100;
-    }
   
     section {
       max-width: 1200px;
@@ -596,7 +621,7 @@
       background-color: #990000;
     }
 
-    /*pagina de pagamentos*/
+    /*pagina de pagamentos DESKTOP*/
     .pagamento-container {
       background-color: #fff;
       padding: 30px;
@@ -692,7 +717,7 @@
       padding: 4px;
       text-align: center;
     }
-
+    
   }
 
 

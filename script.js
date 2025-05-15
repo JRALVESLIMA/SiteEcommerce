@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const submenuToggle = document.querySelector('.submenu-toggle');
   const menuItem = document.querySelector('.menu-item.has-submenu');
 
+  const menuDesktop = document.getElementById('menuDesktop');
+  const submenuDesktopToggle = document.getElementById('submenuDesktopToggle');
+  const desktopMenuItem = document.querySelector('.menu-desktop .menu-item.has-submenu');
+
   // === MENU RESPONSIVO ===
   menuToggle?.addEventListener('click', () => {
     menuOverlay?.classList.toggle('active');
@@ -125,18 +129,18 @@ document.addEventListener('DOMContentLoaded', () => {
   function carregarCarrinho() {
     const carrinhoItens = document.getElementById('carrinho-itens');
     const valorTotalSpan = document.getElementById('valor-total');
-    
+      
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-    
-    const btnEsvaziar = document.getElementById('btn-esvaziar-carrinho');
-    if (btnEsvaziar) {
-      btnEsvaziar.addEventListener('click', () => {
-        if (confirm('Tem certeza que deseja esvaziar o carrinho?')) {
-          localStorage.removeItem('carrinho');
-          carregarCarrinho();
-        } 
-    });
-}
+      
+      const btnEsvaziar = document.getElementById('btn-esvaziar-carrinho');
+      if (btnEsvaziar) {
+        btnEsvaziar.addEventListener('click', () => {
+          if (confirm('Tem certeza que deseja esvaziar o carrinho?')) {
+            localStorage.removeItem('carrinho');
+            carregarCarrinho();
+          } 
+      });
+    }
 
 
     carrinhoItens.innerHTML = '';
@@ -193,6 +197,31 @@ document.addEventListener('DOMContentLoaded', () => {
       total += item.preco * item.quantidade;
     });
 
-    valorTotalSpan.textContent = total.toFixed(2);
+  valorTotalSpan.textContent = total.toFixed(2);
   }
+
+  // === MOSTRAR OU ESCONDER BOTÃO DO MENU QUANDO SCROLLAR === //
+  // === PROXIMA IMPLEMENTAÇÃO === //
+  /*const menuOverlayBar = document.querySelector('.menu-overlay');
+  const menuToggleBtn = document.getElementById('menu-toggle');
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        // Header está visível na tela – esconde o botão
+        menuToggleBtn.style.display = 'none';
+      } else {
+        // Header saiu da tela – mostra o botão
+        menuToggleBtn.style.display = 'block';
+      }
+    },
+    {
+      root: null,
+      threshold: 0.1,
+    }
+  );
+
+  if (menuOverlayBar && menuToggleBtn) {
+    observer.observe(menuOverlayBar);
+  }*/
+
 });
