@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const submenuDesktopToggle = document.getElementById('submenuDesktopToggle');
   const desktopMenuItem = document.querySelector('.menu-desktop .menu-item.has-submenu');
 
-  // === MENU RESPONSIVO ===
+  // === MENU RESPONSIVO === //
   menuToggle?.addEventListener('click', () => {
     menuOverlay?.classList.toggle('active');
   });
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // === SCROLL SUAVE PELO MENU ===
+  // === SCROLL SUAVE PELO MENU === //
   const navLinks = document.querySelectorAll('.menu-item a');
 
   navLinks.forEach(link => {
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // === CARROSSEL ===
+  // === CARROSSEL === //
   const slidesContainer = document.querySelector('.carousel__slides');
   const slides = slidesContainer?.children;
   const totalSlides = slides?.length || 0;
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     slideInterval = setInterval(nextSlide, slideDelay);
   });
 
-  // === ADICIONAR AO CARRINHO ===
+  // === ADICIONAR AO CARRINHO === //
   document.querySelectorAll('.btn-add-cart').forEach(botao => {
     botao.addEventListener('click', () => {
       const card = botao.closest('.product-card');
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // === COMPRAR AGORA ===
+  // === COMPRAR AGORA === //
   document.querySelectorAll('.btn-buy-now').forEach(botao => {
     botao.addEventListener('click', () => {
       const card = botao.closest('.product-card');
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // === PAGAMENTO: CARREGAR PRODUTOS ===
+  // === PAGAMENTO: CARREGAR PRODUTOS === //
   if (window.location.pathname.includes('pagamento.html')) {
     carregarCarrinho();
   }

@@ -13,7 +13,7 @@
   body {
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: #f8f8f8;
     color: #333;
     line-height: 1.4;    
@@ -188,6 +188,7 @@
     margin: 20px auto;
     max-width: 98%;
     box-shadow: 0 0 10px #ccc;
+    scroll-margin-top: 100px;
   }
 
   .product-image {
@@ -404,7 +405,7 @@
     }
 
     .menu-toggle {
-      display: block;
+      display: none;
       font-size: 2rem;
       background: none;
       border: none;
@@ -537,9 +538,10 @@
       background: white;
       border-radius: 25px;
       padding: 2rem;
-      margin: 20px auto 20px;
+      margin: 3% auto 3%;
       max-width: 90%;
       box-shadow: 0 0 10px #ccc;
+      scroll-margin-top: 200px;
     }
 
     .product-image {
