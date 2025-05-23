@@ -108,18 +108,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // === COMPRAR AGORA === //
   document.querySelectorAll('.btn-buy-now').forEach(botao => {
-    botao.addEventListener('click', () => {
-      const card = botao.closest('.product-card');
-      const nome = card.querySelector('.product-title')?.textContent;
-      const precoTexto = card.querySelector('.product-price')?.textContent || '0';
-      const preco = parseFloat(precoTexto.replace(/[^\d,]/g, '').replace(',', '.'));
+  botao.addEventListener('click', () => {
+    const card = botao.closest('.product-card');
+    const nome = card.querySelector('.product-title')?.textContent;
+    const precoTexto = card.querySelector('.product-price')?.textContent || '0';
+    const preco = parseFloat(precoTexto.replace(/[^\d,]/g, '').replace(',', '.'));
 
-      const produto = { nome, preco, quantidade: 1 };
-      localStorage.setItem('carrinho', JSON.stringify([produto]));
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-      window.location.href = 'pagamento.html';
-    });
+    const indexExistente = carrinho.findIndex(p => p.nome === nome);
+
+    if (indexExistente !== -1) {
+      carrinho[indexExistente].quantidade += 1;
+    } else {
+      carrinho.push({ nome, preco, quantidade: 1 });
+    }
+
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    window.location.href = 'pagamento.html';
   });
+});
 
   // === PAGAMENTO: CARREGAR PRODUTOS === //
   if (window.location.pathname.includes('pagamento.html')) {
@@ -160,7 +168,6 @@ document.addEventListener('DOMContentLoaded', () => {
       nome.textContent = item.nome;
 
       const precoUnitario = document.createElement('span');
-      precoUnitario.textContent = `Unit: R$ ${item.preco.toFixed(2)}`;
 
       const quantidadeInput = document.createElement('input');
       quantidadeInput.type = 'number';
@@ -175,6 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
           carregarCarrinho(); 
         }
       });
+      precoUnitario.textContent = `R$ ${(item.preco * item.quantidade).toFixed(2)}`;
 
       const subtotal = document.createElement('span');
       subtotal.textContent = `Subtotal: R$ ${(item.preco * item.quantidade).toFixed(2)}`;
