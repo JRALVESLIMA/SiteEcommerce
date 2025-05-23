@@ -544,6 +544,11 @@
       scroll-margin-top: 200px;
     }
 
+    .product-card:hover {
+      transform: scale(1.09);
+      transition: .7s;
+    }
+
     .product-image {
       width: 30%;
       height: auto;
@@ -568,7 +573,6 @@
 
     .product-price {
       display: flex;
-      
       font-size: 20px;
       color: #333;
       font-weight: bold;
@@ -641,8 +645,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 0;
+      padding: 3% 0;
       border-bottom: 1px solid #eee;
+    }
+
+    .carrinho-precos {
+      flex: 1;
+      text-align: right;
+      white-space: nowrap;
+      background-color: #065f08;
     }
 
     .resumo-total {
@@ -700,6 +711,7 @@
 
     .btn-esvaziar:hover {
       background-color: #e60000;
+      transform: scale(1.03);
     }
 
     .btn-esvaziar:active {
