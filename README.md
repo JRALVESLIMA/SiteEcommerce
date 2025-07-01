@@ -19,18 +19,32 @@ Um site de e-commerce simples, desenvolvido com HTML, CSS e JavaScript, focado e
 
 📁 Estrutura do Projeto
 
-    
-        SiteEcommerce/
-        ├── images/
-        ├── bebidas.html
-        ├── combos.html
-        ├── index.html
-        ├── lanches.html
-        ├── pagamento.html
-        ├── porcoes.html
-        ├── promocoes.html
-        ├── script.js
-        └── style.css
+       ```bash   
+      SiteEcommerce/
+      │
+      ├── 📁 assets/
+      │   └── 📁 images/              
+      │                 
+      │
+      ├── 📁 css/
+      │   └── style.css
+      │
+      ├── 📁 js/
+      │   └── script.js  
+      │
+      ├── 📁 pages/
+      │   ├── index.html     
+      │   ├── bebidas.html
+      │   ├── combos.html
+      │   ├── lanches.html
+      │   ├── pagamento.html
+      │   ├── porcoes.html
+      │   └── promocoes.html
+      │
+      ├── 📁 .git/              
+      ├── .gitignore
+      ├── README.md               
+      ```
    
 
 📦 Instalação
