@@ -19,7 +19,7 @@ Um site de e-commerce simples, desenvolvido com HTML, CSS e JavaScript, focado e
 
 📁 Estrutura do Projeto
 
-       ```bash   
+        
       SiteEcommerce/
       │
       ├── 📁 assets/
@@ -43,8 +43,8 @@ Um site de e-commerce simples, desenvolvido com HTML, CSS e JavaScript, focado e
       │
       ├── 📁 .git/              
       ├── .gitignore
-      ├── README.md               
-      ```
+      └── README.md               
+      
    
 
 📦 Instalação
