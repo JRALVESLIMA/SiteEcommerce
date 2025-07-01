@@ -28,6 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // === Fechamento Menu Mobile === //
+  const closeMenu = document.getElementById("closeMenu");
+
+  menuToggle.addEventListener("click", () => {
+    menuOverlay.classList.add("active");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    menuOverlay.classList.remove("active");
+  });
+
   // === SCROLL SUAVE PELO MENU === //
   const navLinks = document.querySelectorAll('.menu-item a');
 
@@ -207,29 +218,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   valorTotalSpan.textContent = total.toFixed(2);
   }
-
-  // === MOSTRAR OU ESCONDER BOTÃO DO MENU QUANDO SCROLLAR === //
-  // === PROXIMA IMPLEMENTAÇÃO === //
-  /*const menuOverlayBar = document.querySelector('.menu-overlay');
-  const menuToggleBtn = document.getElementById('menu-toggle');
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        // Header está visível na tela – esconde o botão
-        menuToggleBtn.style.display = 'none';
-      } else {
-        // Header saiu da tela – mostra o botão
-        menuToggleBtn.style.display = 'block';
-      }
-    },
-    {
-      root: null,
-      threshold: 0.1,
-    }
-  );
-
-  if (menuOverlayBar && menuToggleBtn) {
-    observer.observe(menuOverlayBar);
-  }*/
 
 });
