@@ -1,6 +1,7 @@
 🍔 SiteEcommerc3
 
 Um site de e-commerce simples, desenvolvido com HTML, CSS e JavaScript, focado em produtos alimentícios como lanches, bebidas, porções e combos.
+(Fotos e Valores somente Ilustrativos!!!)
 
 📸 Demonstração
 
