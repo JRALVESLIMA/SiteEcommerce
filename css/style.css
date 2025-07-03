@@ -45,8 +45,8 @@
   }
 
   .logo-img {
-    margin-top: 5%;
-    max-height: 170%;
+    margin-top: 0%;
+    max-height: 90%;
     height: auto;
     width: auto;
     filter:
@@ -87,7 +87,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: #222;
+    background-color: rgba(2, 2, 2, 0.97);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -102,6 +102,17 @@
     left: 0;
   }
 
+  .menu-logo {
+    text-align: center;
+    padding: 0%;
+  }
+
+  .menu-logo img {
+    width: 45%; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
 
   .close-menu {
     background: none;
@@ -449,8 +460,8 @@
     }
 
     .logo-img {
-      margin-top: 1%;
-      max-height: 190%;
+      margin-top: 0%;
+      max-height: 100%;
       height: auto;
       width: auto;
       filter:
@@ -481,7 +492,7 @@
       left: 0;
       width: 100%;
       height: 75px;
-      z-index: 999;
+      z-index: 1000;
       flex-direction: row;
       justify-content: center;
       align-items: flex-end;
@@ -524,6 +535,10 @@
     }
 
     .close-menu {
+      display: none;
+    }
+
+    .menu-logo {
       display: none;
     }
 
